@@ -18,7 +18,7 @@ for i, v in enumerate(s):
         if matchObj and "<" not in matchObj.group(1) and ">" not in matchObj.group(1):
            sub1 = re.sub(r'<[^)]*>', '', matchObj.group(1))
            sub2 = re.sub(r'\[[^)]*\]', '', sub1)
-           print "Found function : " + sub2.strip()
+           print "Found function: " + sub2.strip()
            for xref in XrefsTo(v.ea, 0): # Get xrefs of the strings we find
                func = idaapi.get_func(xref.frm) # Get the function the xref is in
                if func is not None:

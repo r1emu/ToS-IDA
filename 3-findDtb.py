@@ -1,7 +1,7 @@
 #!/usr/bin/python
 """
 Tree of Savior IDAPython Script
-Automic rename of DTB related functions
+Automatic rename of DTB related functions
 """
 
 import idaapi
@@ -39,8 +39,8 @@ struct DtbTable
 '''.strip();
 
 else:
-    getObjectSignatureWord  = "55 "                  # push ebp                        
-    getObjectSignatureWord += "8B EC "               # mov ebp, esp                    
+    getObjectSignatureWord  = "55 "                  # push ebp
+    getObjectSignatureWord += "8B EC "               # mov ebp, esp
     getObjectSignatureWord += "51 "                  # push ecx
     getObjectSignatureWord += "53 "                  # push ebx
     getObjectSignatureWord += "8B 5D 0C "            # mov ebx, [dword ss:arg2]
@@ -51,11 +51,11 @@ else:
     getObjectSignatureWord += "50 "                  # push eax
     getObjectSignatureWord += "8B F1 "               # mov esi, ecx
     getObjectSignatureWord += "FF 15 ? ? ? ? "       # call [dword ds:<&MSVCR100.ldiv>]
-    getObjectSignatureWord += "69 D2 A7 41 00 00 "   # imul edx, edx, 41A7             
+    getObjectSignatureWord += "69 D2 A7 41 00 00 "   # imul edx, edx, 41A7
     getObjectSignatureWord += "69 C0 14 0B 00 00 "   # imul eax, eax, 0B14
 
-    getObjectSignatureDword  = "55 "                 # push ebp                                        
-    getObjectSignatureDword += "8B EC "              # mov ebp, esp                                    
+    getObjectSignatureDword  = "55 "                 # push ebp
+    getObjectSignatureDword += "8B EC "              # mov ebp, esp
     getObjectSignatureDword += "51 "                 # push ecx
     getObjectSignatureDword += "53 "                 # push ebx
     getObjectSignatureDword += "8B 5D 0C "           # mov ebx, [dword ss:arg2]
@@ -66,7 +66,7 @@ else:
     getObjectSignatureDword += "50 "                 # push eax
     getObjectSignatureDword += "8B F1 "              # mov esi, ecx
     getObjectSignatureDword += "FF 15 ? ? ? ? "      # call [dword ds:<&MSVCR100.ldiv>]
-    getObjectSignatureDword += "69 D2 A7 41 00 00 "  # imul edx, edx, 41A7                             
+    getObjectSignatureDword += "69 D2 A7 41 00 00 "  # imul edx, edx, 41A7
     getObjectSignatureDword += "69 C0 14 0B 00 00 "  # imul eax, eax, 0B14
 
     print "Finding all 'DTB WORD functions'"

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 """
 Tree of Savior IDAPython Script
-Automic rename of Lua related functions
+Automatic rename of Lua related functions
 """
 
 import idaapi
@@ -60,7 +60,7 @@ struct lua_State
 '''.strip();
 
 else:
-    # Tip : GetSessionObject is already defined with ToSrenameDebugFunctions.py for being discovered
+    # Tip : GetSessionObject is already defined with 5-ToSrenameDebugFunctions.py for discovery
     # Just look for XRef of GetSessionObject and you'll find LuaExtern__declGlobalFunction
     LuaExtern__declGlobalFunction = 0x0D18570; # ICBT3
 
